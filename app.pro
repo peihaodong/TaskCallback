@@ -8,3 +8,9 @@ CONFIG += ordered
 SUBDIRS += \
 		task_callback \
 		test
+		
+# 声明依赖关系
+test.depends = task_callback
+
+# 指定启动项目
+test.CONFIG += run_first
